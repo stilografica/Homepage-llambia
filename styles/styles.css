@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1em;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CUSTOM CODE*/
+@font-face{
+    font-family: "Pruistine";
+    src: url("../fonts/Pruistine.ttf");
+}
+body{
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+p{
+    font-family: 'Raleway', sans-serif;
+    color: #26292e;
+    line-height: 1.700em;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 3.000rem;
+    color: #fff;
+    line-height: 1.200em;
+}
+h2{
+    font-size: 2.750rem;
+    text-align: center;
+    padding: 1.250rem 0 1.250rem 0;
+    margin-bottom:1.700rem;
+}
+h3{
+    font-size: 1.375rem;
+}
+h4{
+    font-size: 1.375rem;
+    color: #af9f84;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+h5{
+    font-family: 'Lora', serif;
+    font-size: 1.000rem;
+    font-weight: 600;
+}
+strong{
+    font-weight: 600;
+}
+b{
+    font-family: "Pruistine";
+    font-size: 1.550rem;
+    color: #89898c;
+    line-height: 1.5em;
+}
+a:hover{
+    color:#af9f84;
+}
+/*HEADER*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lora', serif;
+    font-size: 1.063rem;
+    background: url("../images/hero-platos-autor.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 37.500rem;
+    padding: 2.000rem 6.250rem 0 6.250rem;
+}
+/*Top menu and Main menu*/
+#top-menu{
+    align-self: flex-start;
+    flex-grow: 1;
+}
+#top-menu ul{
+    display: flex;
+}
+#top-menu ul li a:hover{
+    color:#af9f84;
+}
+/*buttons styles*/
+.btn{
+    font-size: 1.063rem;
+    text-align: center;
+    display: block;
+    width: 7.000rem;
+    margin: auto;
+}
+.btn, button{
+    background-color: #af9f84;
+    font-family: 'Lora', serif;
+    color: #fff;
+    letter-spacing: .1rem;
+    text-align: center;
+    padding: 0.650rem 1.250rem 0.650rem 1.250rem;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;  
+}
+.btn:hover::after, button:hover::after{
+    content: "\25b8";
+}
+
+.btn:hover, button:hover{
+    background: #26292e;
+    color: #af9f84;
+}
+
+#main-menu{
+    padding-top: 2.438rem;
+    flex-grow: 3;
+
+}
+#main-menu ul{
+    display: flex;
+    margin-left: 1.900rem;
+}
+
+#main-menu ul li a, #top-menu ul li a{
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 1.200rem;
+}
+
+#main-menu ul li a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+/*script text*/
+span{
+    font-family: "Pruistine";
+    font-size: 3.500rem;
+    color: #af9f84;
+    line-height: 6.000rem;
+}
+
+/*COMPANY PRESENTATION*/
+#presentation{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 4.000rem;
+}
+#presentation section{
+   flex-basis: 50.625rem;
+   background-color: #26292e;
+   transform: translateX(-5.625rem);
+}
+#presentation img{
+    max-width: 25.000rem;
+    transform: translateY(-1.625rem);
+    z-index: 1;
+}
+#presentation p{
+    padding: 6.250rem 6.250rem 6.250rem 10.250rem;
+    color: #fff;
+}
+/*PRODUCTS*/
+.product{
+    display:flex;
+    justify-content: center;
+}
+.product section{
+    position: relative;
+    margin: 2.000rem 0 0 1.200rem;
+}
+/*tag presencial u online*/
+.product h5{
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    color: #fff;
+    background-color: #af9f84;
+    padding: 0.313rem;
+}
+/*product name*/
+.product h3{
+    margin-top: 1.2000rem;
+}
+.product h3,.product p{
+    font-size: 1.563rem;
+    font-weight: 600;
+    text-align: center;
+}
+.product p{
+    color: #af9f84;
+   
+}
+/*hover effect images*/
+.grey:hover{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+}
+/*Featured product- regala experiencia*/
+#featuredproduct{
+    background-color: #26292e;
+    background-image: url("../images/hero-risoto-astur.jpg");
+    background-blend-mode: multiply;
+    margin: 5.000rem 0 5.000rem 0;
+    padding: 0 18.375rem 2.500rem 18.375rem;
+}
+#featuredproduct h2{
+    color: #fff;
+}
+#featuredproduct p{
+    color:#fff;
+    text-align: center;
+}
+/*REVIEWS*/
+#slider{
+    display: flex;
+    align-items: center;
+    max-width: 59.375rem;
+    margin:auto;
+}
+.testimonial img{
+    border-radius: 100%;
+    max-width: 9.375rem;
+    display: block;
+    margin:auto;
+}
+.testimonial p{
+    text-align: center;
+    margin: 1.2500rem 0 1.2500rem 0;
+}
+.testimonial h5{
+    text-align: center;
+}
+.fa-angle-left, .fa-angle-right{
+    font-size: 2.500rem;
+    cursor: pointer;
+    align-self: center;
+}
+.hide{
+    display:none;
+}
+/*PARTNERS*/
+#partners{
+    background-color: #26292e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.500rem;
+    margin-top: 5.000rem;
+}
+#partners section{
+    flex-basis: 6.875rem;
+}
+/*FOOTER*/
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: #414144;
+    padding: 3.125rem 6.250rem 3.125rem 6.250rem;
+}
+/*top button*/
+footer article a h6{
+    position: absolute;
+    top:2.500rem;
+    right:1.250rem;
+    font-size: 1.250rem;
+    color: #26292e;
+    writing-mode: vertical-rl;
+    background-color: #af9f84;
+    padding: 0.650rem; 
+}
+#copyright{
+    font-size: 0.875rem;
+    color: #89898c;
+}
+.white{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.300em;
+}
+/*Newsletter form*/
+input[type="email"]{
+    font-family: 'Raleway', sans-serif;
+    color:#fff;
+    margin: 0 0 1rem 0;
+    padding: 0.313rem 4.500rem 0.313rem .5rem ;
+}
+button{
+    font-size: .863rem;
+    border-style: none;
+    cursor: pointer;
+}
+
+
