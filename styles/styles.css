@@ -77,8 +77,8 @@ h1{
 h2{
     font-size: 2.750rem;
     text-align: center;
+    line-height: 1.200em;
     padding: 1.250rem 0 1.250rem 0;
-    margin-bottom:1.700rem;
 }
 h3{
     font-size: 1.375rem;
@@ -117,6 +117,10 @@ header{
     height: 37.500rem;
     padding: 2.000rem 6.250rem 0 6.250rem;
 }
+header a img{
+    -webkit-user-select: none;
+    user-select: none;
+}
 /*Top menu and Main menu*/
 #top-menu{
     align-self: flex-start;
@@ -124,41 +128,14 @@ header{
 }
 #top-menu ul{
     display: flex;
+    
 }
 #top-menu ul li a:hover{
     color:#af9f84;
 }
-/*buttons styles*/
-.btn{
-    font-size: 1.063rem;
-    text-align: center;
-    display: block;
-    width: 7.000rem;
-    margin: auto;
-}
-.btn, button{
-    background-color: #af9f84;
-    font-family: 'Lora', serif;
-    color: #fff;
-    letter-spacing: .1rem;
-    text-align: center;
-    padding: 0.650rem 1.250rem 0.650rem 1.250rem;
-    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
-    transition: background-color 0.3s linear, color 0.3s linear;  
-}
-.btn:hover::after, button:hover::after{
-    content: "\25b8";
-}
-
-.btn:hover, button:hover{
-    background: #26292e;
-    color: #af9f84;
-}
-
 #main-menu{
     padding-top: 2.438rem;
     flex-grow: 3;
-
 }
 #main-menu ul{
     display: flex;
@@ -176,13 +153,15 @@ header{
 #main-menu ul li a:hover{
     border-bottom: 2px solid #fff;
 }
+#hamburger{
+    display:none;
+}
 
-/*script text*/
+/*cursive text*/
 span{
     font-family: "Pruistine";
     font-size: 3.500rem;
     color: #af9f84;
-    line-height: 6.000rem;
 }
 
 /*COMPANY PRESENTATION*/
@@ -206,9 +185,35 @@ span{
     padding: 6.250rem 6.250rem 6.250rem 10.250rem;
     color: #fff;
 }
+/*buttons styles*/
+.btn{
+    font-size: 1.063rem;
+    text-align: center;
+    display: block;
+    width: 7.000rem;
+    margin: auto;
+}
+.btn, button{
+    background-color: #af9f84;
+    font-family: 'Lora', serif;
+    color: #fff;
+    letter-spacing: .1rem;
+    text-align: center;
+    padding: 0.650rem 1.250rem 0.650rem 1.250rem;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;  
+}
+.btn:hover::after, button:hover::after{
+    content: "\25b8";
+}
+.btn:hover, button:hover{
+    background: #26292e;
+    color: #af9f84;
+}
 /*PRODUCTS*/
 .product{
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .product section{
@@ -237,19 +242,23 @@ span{
     color: #af9f84;
    
 }
+/*image product*/
+.grey{
+    max-width: 94vw;
+}
 /*hover effect images*/
 .grey:hover{
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
 }
-/*Featured product- regala experiencia*/
+/*Featured product- regala una experiencia*/
 #featuredproduct{
     background-color: #26292e;
     background-image: url("../images/hero-risoto-astur.jpg");
     background-blend-mode: multiply;
     margin: 5.000rem 0 5.000rem 0;
-    padding: 0 18.375rem 2.500rem 18.375rem;
+    padding: 2.500rem 18.375rem 2.500rem 18.375rem;
 }
 #featuredproduct h2{
     color: #fff;
@@ -288,8 +297,9 @@ span{
 }
 /*PARTNERS*/
 #partners{
-    background-color: #26292e;
     display: flex;
+    flex-wrap: wrap;
+    background-color: #26292e;
     justify-content: space-between;
     align-items: center;
     padding: 3.500rem;
@@ -303,13 +313,14 @@ footer{
     position: relative;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #414144;
     padding: 3.125rem 6.250rem 3.125rem 6.250rem;
 }
 /*top button*/
 footer article a h6{
-    position: absolute;
-    top:2.500rem;
+    position: fixed;
+    bottom:0.500rem;
     right:1.250rem;
     font-size: 1.250rem;
     color: #26292e;
@@ -341,4 +352,135 @@ button{
     cursor: pointer;
 }
 
+/*Responsive mobile*/
+@media (max-width:1023px){
+    header{
+        padding: 2.000rem 2.250rem 0 2.250rem;
+    }
+    #main-menu{ 
+        position: fixed;
+        top:0;
+        right:0;
+        background-color: #26292e;
+        max-width:350px;
+        order:2;
+        opacity:0.9;
+        z-index:99;
+        transition: width 2s;
+        transition-timing-function: ease-out;
+    }
+    #main-menu ul{
+        flex-direction: column;        
+        line-height: 3.300em;
+        margin: 0 1.000rem 1.000rem 1.000rem;
+    }
+    #top-menu{
+        justify-content: flex-start;
+        flex-grow: 1;
+    }
+    h1{
+        display:block;
+        text-shadow: 3px 0px 2px#000;
+        font-size: 2.500rem;
+    }
+    h1 span{
+        text-shadow: 3px 0px 2px#000;
+        font-size: 2.900rem;
+        } 
+
+    #hamburger{
+        display:block;
+        position: fixed;
+        top:20px;
+        right:20px;
+        cursor: pointer;
+        z-index: 99;
+    }
+    #hamburger div{
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #fff;
+        border-radius: 3px;
+        z-index: 999;
+    }
+    #presentation section{
+        transform: none;
+    }
+    #presentation p{
+        padding: 5.250rem 4.250rem 4.250rem 3.250rem;
+        color: #fff;
+    }
+    #presentation img{
+        display:none;
+    }
+    .product section{
+        margin: 2.000rem 0 0 0rem;
+    }
+
+    #featuredproduct {
+        background-position: center;
+        padding: 2.500rem 2.500rem 2.500rem 2.500rem
+
+    }
+    #partners{
+        justify-content: center;
+    }
+
+    #partners section{
+        padding: 20px;
+
+    }
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.125rem 2.250rem 3.125rem 2.250rem;
+    }
+    footer article{
+        padding-top: 1.500rem;
+    }
+
+
+}
+@media (min-width:1024px){
+    header{
+        flex-direction: column;
+        align-items:center;
+        background: url(../images/hero-platos-autor.jpg) no-repeat top;
+        background-attachment: fixed;
+    }
+
+    #main-menu{
+        padding-top: .438rem;
+        flex-grow: 0;
+    
+    }
+    #top-menu{
+        align-self: center;
+        flex-grow: 0;
+        order: -1;
+    }
+    h1{
+        display:block;
+        text-align: center;
+        padding-top: 100px;
+        text-shadow: 3px 0px 2px#000;
+    }
+    h1 span{
+        text-shadow: 3px 0px 2px#000;
+    }
+    #presentation section{
+        flex-basis: 100vw;
+        transform: translateX(0rem);
+     }
+
+    #presentation img{
+            display:none;
+        }
+    
+    #presentation p{
+        text-align: center;
+    }
+}
 
