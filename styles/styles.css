@@ -86,7 +86,7 @@ h3{
 h4{
     font-size: 1.375rem;
     color: #af9f84;
-    letter-spacing: 1px;
+    letter-spacing: 0.063rem;
     margin-bottom: .5rem;
 }
 h5{
@@ -145,7 +145,7 @@ header a img{
 #main-menu ul li a, #top-menu ul li a{
     color: #fff;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.063rem;
     text-transform: uppercase;
     margin-left: 1.200rem;
 }
@@ -336,7 +336,7 @@ footer article a h6{
     font-family: 'Raleway', sans-serif;
     color: #fff;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.063rem;
     line-height: 1.300em;
 }
 /*Newsletter form*/
@@ -352,7 +352,7 @@ button{
     cursor: pointer;
 }
 
-/*Responsive mobile*/
+/*Responsive*/
 @media (max-width:1023px){
     header{
         padding: 2.000rem 2.250rem 0 2.250rem;
@@ -362,7 +362,7 @@ button{
         top:0;
         right:0;
         background-color: #26292e;
-        max-width:350px;
+        max-width:21.875rem;
         order:2;
         opacity:0.9;
         z-index:99;
@@ -380,29 +380,29 @@ button{
     }
     h1{
         display:block;
-        text-shadow: 3px 0px 2px#000;
+        text-shadow: 0.188rem 0 0.125rem #000;
         font-size: 2.500rem;
     }
     h1 span{
-        text-shadow: 3px 0px 2px#000;
+        text-shadow: 0.188rem 0 0.125rem #000;
         font-size: 2.900rem;
         } 
 
     #hamburger{
         display:block;
         position: fixed;
-        top:20px;
-        right:20px;
+        top:1.250rem;
+        right:1.250rem;
         cursor: pointer;
         z-index: 99;
     }
     #hamburger div{
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
+        width: 2.063rem;
+        height: 0.250rem;
+        margin-bottom: 0.313rem;
         position: relative;
         background: #fff;
-        border-radius: 3px;
+        border-radius: 0.188rem;
         z-index: 999;
     }
     #presentation section{
@@ -429,7 +429,7 @@ button{
     }
 
     #partners section{
-        padding: 20px;
+        padding: 1.250rem;
 
     }
     footer{
@@ -464,11 +464,11 @@ button{
     h1{
         display:block;
         text-align: center;
-        padding-top: 100px;
-        text-shadow: 3px 0px 2px#000;
+        padding-top: 6.250rem;
+        text-shadow: 0.188rem 0 0.125rem #000;
     }
     h1 span{
-        text-shadow: 3px 0px 2px#000;
+        text-shadow: 0.188rem 0 0.125rem #000;
     }
     #presentation section{
         flex-basis: 100vw;
