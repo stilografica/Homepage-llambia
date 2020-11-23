@@ -128,6 +128,7 @@ header a img{
 }
 #top-menu ul{
     display: flex;
+    justify-content: flex-end;
     
 }
 #top-menu ul li a:hover{
@@ -139,6 +140,7 @@ header a img{
 }
 #main-menu ul{
     display: flex;
+    justify-content: flex-end;
     margin-left: 1.900rem;
 }
 
@@ -153,10 +155,10 @@ header a img{
 #main-menu ul li a:hover{
     border-bottom: 2px solid #fff;
 }
-#hamburger{
+/*Hamburger icons*/
+#hamburger, #hamburgerCross{
     display:none;
 }
-
 /*cursive text*/
 span{
     font-family: "Pruistine";
@@ -174,11 +176,11 @@ span{
 #presentation section{
    flex-basis: 50.625rem;
    background-color: #26292e;
-   transform: translateX(-5.625rem);
+   transform: translateY(-2.625rem);
 }
 #presentation img{
     max-width: 25.000rem;
-    transform: translateY(-1.625rem);
+    transform: translateX(4.625rem);
     z-index: 1;
 }
 #presentation p{
@@ -287,6 +289,7 @@ span{
 .testimonial h5{
     text-align: center;
 }
+/*Icons next and prev*/
 .fa-angle-left, .fa-angle-right{
     font-size: 2.500rem;
     cursor: pointer;
@@ -319,7 +322,7 @@ footer{
 }
 /*top button*/
 footer article a h6{
-    position: fixed;
+    position: absolute;
     bottom:0.500rem;
     right:1.250rem;
     font-size: 1.250rem;
@@ -328,10 +331,12 @@ footer article a h6{
     background-color: #af9f84;
     padding: 0.650rem; 
 }
+/*copyright*/
 #copyright{
     font-size: 0.875rem;
     color: #89898c;
 }
+/*White text*/
 .white{
     font-family: 'Raleway', sans-serif;
     color: #fff;
@@ -352,14 +357,16 @@ button{
     cursor: pointer;
 }
 
-/*Responsive*/
+/*Responsive small screens*/
 @media (max-width:1023px){
     header{
         padding: 2.000rem 2.250rem 0 2.250rem;
     }
+
     #main-menu{ 
+        display: none;
         position: fixed;
-        top:0;
+        top:2.250rem;
         right:0;
         background-color: #26292e;
         max-width:21.875rem;
@@ -369,14 +376,37 @@ button{
         transition: width 2s;
         transition-timing-function: ease-out;
     }
+   
     #main-menu ul{
         flex-direction: column;        
         line-height: 3.300em;
         margin: 0 1.000rem 1.000rem 1.000rem;
     }
+ 
     #top-menu{
         justify-content: flex-start;
         flex-grow: 1;
+    }
+    /*Hamburger icons*/
+    #hamburger{
+        display:block;
+        position: fixed;
+        right:1.200rem;
+        top:3.400rem;
+        z-index: 99;
+        cursor: pointer;
+    }
+    .fa-bars, .fa-times{
+        color: #89898c;
+        font-size: 2.000rem;
+    }
+    #hamburgerCross{
+        display:none;
+        position: fixed;
+        right:1.200rem;
+        top:3.400rem;
+        z-index: 99;
+        cursor: pointer;
     }
     h1{
         display:block;
@@ -388,26 +418,11 @@ button{
         font-size: 2.900rem;
         } 
 
-    #hamburger{
-        display:block;
-        position: fixed;
-        top:1.250rem;
-        right:1.250rem;
-        cursor: pointer;
-        z-index: 99;
-    }
-    #hamburger div{
-        width: 2.063rem;
-        height: 0.250rem;
-        margin-bottom: 0.313rem;
-        position: relative;
-        background: #fff;
-        border-radius: 0.188rem;
-        z-index: 999;
-    }
+
     #presentation section{
         transform: none;
     }
+
     #presentation p{
         padding: 5.250rem 4.250rem 4.250rem 3.250rem;
         color: #fff;
@@ -443,7 +458,8 @@ button{
 
 
 }
-@media (min-width:1024px){
+/*Medium and big screens*/
+@media (min-width:1024px) and (max-width:1360px){
     header{
         flex-direction: column;
         align-items:center;
@@ -484,3 +500,16 @@ button{
     }
 }
 
+@media (min-width:1361px){
+    h1{
+        display:block;
+    }
+    #main-menu{
+        flex-basis: 50vw;
+
+    }
+    #top-menu{
+        justify-content: flex-start;
+
+    }
+}

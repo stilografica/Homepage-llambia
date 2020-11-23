@@ -37,11 +37,8 @@
             </ul>
         </nav>
         <!--hamburger menu -- only responsive version-->
-        <div id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <div id="hamburger"> <i class="fa fa-bars"></i></div>
+    <div id="hamburgerCross"><i class="fa fa-times"></i></div>
         <!-- Persuasive title-->
         <h1>Disfruta de una<br />experiencia de sabores<br /><span>en el paraíso</span></h1>
     </header>
@@ -80,18 +77,18 @@
  <!--Testimonials-->
 <aside>
     <article id="slider">
-        <i class="fa fa-angle-left"></i>
-        <section class="testimonial">
+        <i onclick="sliderPrev()" class="fa fa-angle-left"></i>
+        <section class="testimonial hide">
             <img src="images/reviews/Ernesto.jpg" alt="hombre sonriendo">
             <p>El mejor fin de semana de mi vida, fui con mi pareja e hicimos dos cursos de cocina y una cata de vinos. Impresionante la formación, el lugar y el trato. Sin duda, lo recomiendo al 100%. Repitiría sin duda la experiencia porque es una oportunidad para relajarse, aprender y disfrutar. </p>
             <h5>Ernesto, Barcelona</h5>
         </section>
-        <section class="testimonial hide">
-            <img src="images/Ernesto.jpg" alt="hombre sonriendo">
-            <p>El mejor fin de semana de mi vida, fui con mi pareja e hicimos dos cursos de cocina y una cata de vinos. Impresionante la formación, el lugar y el trato. Sin duda, lo recomiendo al 100%. Repitiría sin duda la experiencia porque es una oportunidad para relajarse, aprender y disfrutar. </p>
-            <h5>Ernesto, Barcelona</h5>
+        <section class="testimonial">
+            <img src="images/reviews/Lidia.jpg" alt="hombre sonriendo">
+            <p>Me regalaron un curso online con Llambia y me fascinó. Muy bien explicado, con todo lujo de detalles. Puedes consultar dudas y te hacen un regalo tras finalizar el curso. Quedé encantada y pienso repetir. </p>
+            <h5>Lidia, Zaragoza</h5>
         </section>
-        <i class="fa fa-angle-right"></i>
+        <i onclick="sliderNext()" class="fa fa-angle-right"></i>
     </article>
     <!--Partners-->
     <article id="partners">
