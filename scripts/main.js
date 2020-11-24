@@ -13,7 +13,6 @@ function open(){
     menu.style.display="block";
     
 }
-
 function close(){
     menu.style.display="none";
     hamburgerCross.style.display="none";

@@ -87,6 +87,7 @@ h4{
     font-size: 1.375rem;
     color: #af9f84;
     letter-spacing: 0.063rem;
+    line-height: 1.200em;
     margin-bottom: .5rem;
 }
 h5{
@@ -128,8 +129,7 @@ header a img{
 }
 #top-menu ul{
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;   
 }
 #top-menu ul li a:hover{
     color:#af9f84;
@@ -143,7 +143,6 @@ header a img{
     justify-content: flex-end;
     margin-left: 1.900rem;
 }
-
 #main-menu ul li a, #top-menu ul li a{
     color: #fff;
     font-weight: 400;
@@ -151,7 +150,6 @@ header a img{
     text-transform: uppercase;
     margin-left: 1.200rem;
 }
-
 #main-menu ul li a:hover{
     border-bottom: 2px solid #fff;
 }
@@ -165,7 +163,6 @@ span{
     font-size: 3.500rem;
     color: #af9f84;
 }
-
 /*COMPANY PRESENTATION*/
 #presentation{
     display: flex;
@@ -222,7 +219,7 @@ span{
     position: relative;
     margin: 2.000rem 0 0 1.200rem;
 }
-/*tag presencial u online*/
+/*tag type product: "presencial" u "online"*/
 .product h5{
     position: absolute;
     top: 0.625rem;
@@ -231,7 +228,7 @@ span{
     background-color: #af9f84;
     padding: 0.313rem;
 }
-/*product name*/
+/*product name and price*/
 .product h3{
     margin-top: 1.2000rem;
 }
@@ -242,19 +239,17 @@ span{
 }
 .product p{
     color: #af9f84;
-   
 }
-/*image product*/
+/*image product and hover effect images*/
 .grey{
     max-width: 94vw;
 }
-/*hover effect images*/
 .grey:hover{
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
 }
-/*Featured product- regala una experiencia*/
+/*Featured product: "regala una experiencia"*/
 #featuredproduct{
     background-color: #26292e;
     background-image: url("../images/hero-risoto-astur.jpg");
@@ -286,6 +281,7 @@ span{
     text-align: center;
     margin: 1.2500rem 0 1.2500rem 0;
 }
+/*Client's name and place of residence*/
 .testimonial h5{
     text-align: center;
 }
@@ -295,6 +291,7 @@ span{
     cursor: pointer;
     align-self: center;
 }
+/*Hidden testimonials*/
 .hide{
     display:none;
 }
@@ -331,7 +328,7 @@ footer article a h6{
     background-color: #af9f84;
     padding: 0.650rem; 
 }
-/*copyright*/
+/*Copyright*/
 #copyright{
     font-size: 0.875rem;
     color: #89898c;
@@ -358,11 +355,18 @@ button{
 }
 
 /*Responsive small screens*/
-@media (max-width:1023px){
+@media (max-width:1021px){
+    h2{
+        font-size: 1.950rem;
+    }
     header{
+        flex-direction: column;
+        align-items:center;
         padding: 2.000rem 2.250rem 0 2.250rem;
     }
-
+    header img{
+        width:85%;
+    }
     #main-menu{ 
         display: none;
         position: fixed;
@@ -373,26 +377,23 @@ button{
         order:2;
         opacity:0.9;
         z-index:99;
-        transition: width 2s;
-        transition-timing-function: ease-out;
     }
-   
     #main-menu ul{
         flex-direction: column;        
         line-height: 3.300em;
-        margin: 0 1.000rem 1.000rem 1.000rem;
+        margin: 0.600rem 1.700rem 1.000rem 1.500rem;
     }
- 
     #top-menu{
-        justify-content: flex-start;
-        flex-grow: 1;
+        align-self: center;
+        flex-grow: 0;
+        order: -1;
     }
     /*Hamburger icons*/
     #hamburger{
         display:block;
         position: fixed;
         right:1.200rem;
-        top:3.400rem;
+        top:4.000rem;
         z-index: 99;
         cursor: pointer;
     }
@@ -408,21 +409,21 @@ button{
         z-index: 99;
         cursor: pointer;
     }
+    /*Persuasive title*/
     h1{
+        font-size: 2.500rem;
         display:block;
         text-shadow: 0.188rem 0 0.125rem #000;
-        font-size: 2.500rem;
+        padding-top: 6.250rem;
     }
     h1 span{
         text-shadow: 0.188rem 0 0.125rem #000;
         font-size: 2.900rem;
         } 
-
-
+    /*PRESENTATION*/
     #presentation section{
         transform: none;
     }
-
     #presentation p{
         padding: 5.250rem 4.250rem 4.250rem 3.250rem;
         color: #fff;
@@ -433,20 +434,20 @@ button{
     .product section{
         margin: 2.000rem 0 0 0rem;
     }
-
+    /*Featured product*/
     #featuredproduct {
         background-position: center;
         padding: 2.500rem 2.500rem 2.500rem 2.500rem
-
     }
+    /*Partners*/
     #partners{
         justify-content: center;
     }
-
     #partners section{
         padding: 1.250rem;
 
     }
+    /*FOOTER*/
     footer{
         flex-direction: column;
         align-items: flex-start;
@@ -455,28 +456,25 @@ button{
     footer article{
         padding-top: 1.500rem;
     }
-
-
 }
-/*Medium and big screens*/
-@media (min-width:1024px) and (max-width:1360px){
+/*Medium screens*/
+@media (min-width:1022px) and (max-width:1366px){
     header{
         flex-direction: column;
         align-items:center;
         background: url(../images/hero-platos-autor.jpg) no-repeat top;
         background-attachment: fixed;
     }
-
     #main-menu{
         padding-top: .438rem;
         flex-grow: 0;
-    
     }
     #top-menu{
         align-self: center;
         flex-grow: 0;
         order: -1;
     }
+     /*Persuasive title*/
     h1{
         display:block;
         text-align: center;
@@ -486,21 +484,20 @@ button{
     h1 span{
         text-shadow: 0.188rem 0 0.125rem #000;
     }
+    /*PRESENTATION*/
     #presentation section{
         flex-basis: 100vw;
         transform: translateX(0rem);
      }
-
     #presentation img{
             display:none;
-        }
-    
+    }
     #presentation p{
         text-align: center;
     }
 }
-
-@media (min-width:1361px){
+/*Big screens*/
+@media (min-width:1367px){
     h1{
         display:block;
     }
