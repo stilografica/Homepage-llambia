@@ -4,7 +4,7 @@ _Ejercicio de maquetación del proyecto de IT Academy itinerario Frontend_
 
 ## Pre-requisitos 📋
 
-_La homepage está maquetada para verla en las siguientes screen resolutions_
+_La homepage está maquetada para verla en las siguientes screen resolutions, esto no significa que en otras resoluciones se visualice correctamente, pero las medidas testeadas son las sguientes._
 
 * **1920x1080**
 * **1680x1050**
